@@ -1,22 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import Sticking from "../Sticking";
 import Notation from "../Notation";
 import Controls from "../Controls";
-import { getRandomStickControlExercise } from "../../actions/exerciseActions";
 
 const Exercise = () => {
-  const dispatch = useDispatch();
-
   const getCurrentExercise = useSelector((state) => state.getCurrentExercise);
   const { exercise, loading } = getCurrentExercise;
-
-  useEffect(() => {
-    if (!exercise && !loading) {
-      dispatch(getRandomStickControlExercise());
-    }
-    console.log(exercise);
-  }, [exercise, dispatch]);
 
   return (
     <>
@@ -31,7 +21,12 @@ const Exercise = () => {
           <Sticking sticking={exercise.sticking} />
           <Controls />
         </>
-      ) : null}
+      ) : (
+        <>
+          <h3>No exercise selected.</h3>
+          <Controls />
+        </>
+      )}
     </>
   );
 };
