@@ -125,6 +125,37 @@ const Controls = () => {
     }
   };
 
+  const exerciseInvertHandler = () => {
+    const currentExercise = { ...exercise };
+    currentExercise.sticking = invertSticking(currentExercise.sticking);
+    currentExercise.inverted = !currentExercise.inverted;
+    dispatch(setCurrentStickControlExercise(currentExercise));
+  };
+
+  // Functions
+  function invertSticking(sticking) {
+    const inverted = Array.from(sticking, (letter) => {
+      switch (letter) {
+        case "R":
+          letter = "L";
+          return letter;
+        case "L":
+          letter = "R";
+          return letter;
+        case "F":
+          letter = "C";
+          return letter;
+        case "C":
+          letter = "F";
+          return letter;
+        default:
+          return letter;
+      }
+    });
+    const invertedFormatted = inverted.join("");
+    return invertedFormatted;
+  }
+
   // Get all exercises if exercises state is empty
   useEffect(() => {
     if (!exercises && !allExercisesLoading) {
@@ -181,6 +212,8 @@ const Controls = () => {
         </select>
         <button type="submit">Search</button>
       </form>
+      <h3>Invert</h3>
+      <button onClick={exerciseInvertHandler}>Invert Exercise</button>
     </>
   );
 };
