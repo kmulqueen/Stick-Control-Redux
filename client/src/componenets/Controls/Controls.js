@@ -16,6 +16,10 @@ const Controls = () => {
   // Component state
   const [singleBeatCombinations, setSingleBeatCombinations] = useState([]);
   const [flamBeats, setFlamBeats] = useState([]);
+  const [exerciseNumber, setExerciseNumber] = useState(1);
+  const [exerciseSection, setExerciseSection] = useState(
+    "Single Beat Combinations"
+  );
 
   // Event handlers
   const randomExerciseHandler = () => {
@@ -96,6 +100,31 @@ const Controls = () => {
     }
   };
 
+  const exerciseSearchHandler = (e) => {
+    e.preventDefault();
+
+    switch (exerciseSection) {
+      case "Single Beat Combinations":
+        const singleBeatExercise = singleBeatCombinations.find(
+          (exercise) => exercise.exercise.toString() === exerciseNumber
+        );
+        dispatch(setCurrentStickControlExercise(singleBeatExercise));
+        break;
+      case "Flam Beats":
+        const flamExercise = flamBeats.find(
+          (exercise) => exercise.exercise.toString() === exerciseNumber
+        );
+        dispatch(setCurrentStickControlExercise(flamExercise));
+        break;
+
+      default:
+        dispatch(setCurrentStickControlExercise(singleBeatCombinations[0]));
+        setExerciseNumber(1);
+        setExerciseSection("Single Beat Combinations");
+        break;
+    }
+  };
+
   // Get all exercises if exercises state is empty
   useEffect(() => {
     if (!exercises && !allExercisesLoading) {
@@ -131,6 +160,27 @@ const Controls = () => {
       <h3>Sequential</h3>
       <button onClick={previousExerciseHandler}>Previous Exercise</button>
       <button onClick={nextExerciseHandler}>Next Exercise</button>
+      <h3>Search</h3>
+      <form onSubmit={exerciseSearchHandler}>
+        <label htmlFor="searchExerciseNumber">Exercise Number: </label>
+        <input
+          type="number"
+          name="searchExerciseNumber"
+          min="1"
+          max={exerciseSection === "Single Beat Combinations" ? "72" : "192"}
+          value={exerciseNumber}
+          onChange={(e) => setExerciseNumber(e.target.value)}
+        />
+        <label htmlFor="searchExerciseSection">Exercise Section: </label>
+        <select
+          name="searchExerciseSection"
+          onChange={(e) => setExerciseSection(e.target.value)}
+        >
+          <option>Single Beat Combinations</option>
+          <option>Flam Beats</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
     </>
   );
 };
