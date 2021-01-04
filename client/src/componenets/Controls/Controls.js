@@ -38,6 +38,64 @@ const Controls = () => {
     dispatch(setCurrentStickControlExercise(randomFlamBeatExercise));
   };
 
+  const previousExerciseHandler = () => {
+    const currentExercise = { ...exercise };
+
+    switch (currentExercise.section) {
+      case "Single Beat Combinations":
+        if (currentExercise.exercise !== 1) {
+          dispatch(
+            setCurrentStickControlExercise(
+              singleBeatCombinations[currentExercise.exercise - 2]
+            )
+          );
+        }
+        break;
+      case "Flam Beats":
+        if (currentExercise.exercise !== 1) {
+          dispatch(
+            setCurrentStickControlExercise(
+              flamBeats[currentExercise.exercise - 1]
+            )
+          );
+        }
+        break;
+
+      default:
+        dispatch(setCurrentStickControlExercise(singleBeatCombinations[0]));
+        break;
+    }
+  };
+
+  const nextExerciseHandler = () => {
+    const currentExercise = { ...exercise };
+
+    switch (currentExercise.section) {
+      case "Single Beat Combinations":
+        if (currentExercise.exercise !== 72) {
+          dispatch(
+            setCurrentStickControlExercise(
+              singleBeatCombinations[currentExercise.exercise]
+            )
+          );
+        }
+        break;
+      case "Flam Beats":
+        if (currentExercise.exercise !== 192) {
+          dispatch(
+            setCurrentStickControlExercise(
+              flamBeats[currentExercise.exercise + 1]
+            )
+          );
+        }
+        break;
+
+      default:
+        dispatch(setCurrentStickControlExercise(singleBeatCombinations[0]));
+        break;
+    }
+  };
+
   // Get all exercises if exercises state is empty
   useEffect(() => {
     if (!exercises && !allExercisesLoading) {
@@ -62,6 +120,7 @@ const Controls = () => {
 
   return (
     <>
+      <h3>Random</h3>
       <button onClick={randomExerciseHandler}>Random Exercise</button>
       <button onClick={randomSingleBeatExerciseHandler}>
         Random Single Beat Combination Exercise
@@ -69,6 +128,9 @@ const Controls = () => {
       <button onClick={randomFlamBeatExerciseHandler}>
         Random Flam Beat Exercise
       </button>
+      <h3>Sequential</h3>
+      <button onClick={previousExerciseHandler}>Previous Exercise</button>
+      <button onClick={nextExerciseHandler}>Next Exercise</button>
     </>
   );
 };
