@@ -3,14 +3,14 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 import {
   getAllExercisesReducer,
-  getRandomExerciseReducer,
   getCurrentExerciseReducer,
+  setCurrentExerciseReducer,
 } from "./reducers/exerciseReducer";
 
 const reducer = combineReducers({
   getAllExercises: getAllExercisesReducer,
+  setCurrentExercise: setCurrentExerciseReducer,
   getCurrentExercise: getCurrentExerciseReducer,
-  getRandomExercise: getRandomExerciseReducer,
 });
 
 const middleware = [thunk];

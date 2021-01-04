@@ -29,15 +29,4 @@ module.exports = {
       res.status(422).json(error);
     }
   },
-  getRandomExercise: async function (req, res) {
-    try {
-      const exercises = await Exercise.find();
-      const randomIndex = Math.floor(Math.random() * exercises.length);
-      const randomExercise = exercises[randomIndex];
-
-      res.json(randomExercise);
-    } catch (error) {
-      res.status(422).json(error);
-    }
-  },
 };
