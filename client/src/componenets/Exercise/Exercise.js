@@ -16,7 +16,7 @@ const Exercise = () => {
         <>
           <h3>
             {exercise.section} - No. {exercise.exercise}{" "}
-            {exercise.inverted ? "Inverted" : null}
+            {exercise.inverted ? "- Inverted" : null}
           </h3>
           <Notation rhythm={exercise.count} />
           <Sticking sticking={exercise.sticking} />

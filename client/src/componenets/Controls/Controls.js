@@ -43,24 +43,20 @@ const Controls = () => {
   };
 
   const previousExerciseHandler = () => {
-    const currentExercise = { ...exercise };
-
-    switch (currentExercise.section) {
+    switch (exercise.section) {
       case "Single Beat Combinations":
-        if (currentExercise.exercise !== 1) {
+        if (exercise.exercise !== 1) {
           dispatch(
             setCurrentStickControlExercise(
-              singleBeatCombinations[currentExercise.exercise - 2]
+              singleBeatCombinations[exercise.exercise - 2]
             )
           );
         }
         break;
       case "Flam Beats":
-        if (currentExercise.exercise !== 1) {
+        if (exercise.exercise !== 1) {
           dispatch(
-            setCurrentStickControlExercise(
-              flamBeats[currentExercise.exercise - 1]
-            )
+            setCurrentStickControlExercise(flamBeats[exercise.exercise - 1])
           );
         }
         break;
@@ -72,24 +68,20 @@ const Controls = () => {
   };
 
   const nextExerciseHandler = () => {
-    const currentExercise = { ...exercise };
-
-    switch (currentExercise.section) {
+    switch (exercise.section) {
       case "Single Beat Combinations":
-        if (currentExercise.exercise !== 72) {
+        if (exercise.exercise !== 72) {
           dispatch(
             setCurrentStickControlExercise(
-              singleBeatCombinations[currentExercise.exercise]
+              singleBeatCombinations[exercise.exercise]
             )
           );
         }
         break;
       case "Flam Beats":
-        if (currentExercise.exercise !== 192) {
+        if (exercise.exercise !== 192) {
           dispatch(
-            setCurrentStickControlExercise(
-              flamBeats[currentExercise.exercise + 1]
-            )
+            setCurrentStickControlExercise(flamBeats[exercise.exercise + 1])
           );
         }
         break;
@@ -106,13 +98,17 @@ const Controls = () => {
     switch (exerciseSection) {
       case "Single Beat Combinations":
         const singleBeatExercise = singleBeatCombinations.find(
-          (exercise) => exercise.exercise.toString() === exerciseNumber
+          (exercise) =>
+            exercise.section === exerciseSection &&
+            exercise.exercise.toString() === exerciseNumber.toString()
         );
         dispatch(setCurrentStickControlExercise(singleBeatExercise));
         break;
       case "Flam Beats":
         const flamExercise = flamBeats.find(
-          (exercise) => exercise.exercise.toString() === exerciseNumber
+          (exercise) =>
+            exercise.section === exerciseSection &&
+            exercise.exercise.toString() === exerciseNumber.toString()
         );
         dispatch(setCurrentStickControlExercise(flamExercise));
         break;
