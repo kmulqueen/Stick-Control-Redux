@@ -29,7 +29,7 @@ const Exercise = () => {
           )}
 
           <Notation rhythm={exercise.count} />
-          <Sticking sticking={exercise.sticking} />
+          <Sticking exercise={exercise} />
           <Controls />
         </>
       ) : !exercise && !loading ? (

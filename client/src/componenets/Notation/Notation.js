@@ -1,4 +1,5 @@
 import React from "react";
+import "./notation.css";
 import { ReactComponent as Flams } from "../../SVGs/stick-control/flams.svg";
 import { ReactComponent as FlamsMixed } from "../../SVGs/stick-control/flams-mixed-sixteenths.svg";
 import { ReactComponent as FlamsMixedTaps } from "../../SVGs/stick-control/flams-mixed-taps.svg";
