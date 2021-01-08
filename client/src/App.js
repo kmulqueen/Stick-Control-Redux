@@ -1,3 +1,4 @@
+import "./dist/css/main.min.css";
 import Exercise from "./componenets/Exercise";
 
 function App() {
