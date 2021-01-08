@@ -1,5 +1,5 @@
 .sticking {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     display: flex;
     margin-bottom: 1em;
 
@@ -7,7 +7,7 @@
     &--sc-sbc {
         .measure1 {
             display: grid;
-            grid-template-columns: [ts-start] 6.5rem [ts-end m1n1-start] 3rem [m1n1-end m1n2-start] 3rem [m1n2-end m1n3-start] 3rem [m1n3-end m1n4-start] 3.75rem [m1n4-end m1n5-start] 3rem [m1n5-end m1n6-start] 3rem [m1n6-end m1n7-start] 3rem [m1n7-end m1n8-start] 3rem [m1-end];
+            grid-template-columns: [ts-start] 4rem [ts-end m1n1-start] 2rem [m1n1-end m1n2-start] 2rem [m1n2-end m1n3-start] 2rem [m1n3-end m1n4-start] 2.25rem [m1n4-end m1n5-start] 2rem [m1n5-end m1n6-start] 2rem [m1n6-end m1n7-start] 2rem [m1n7-end m1n8-start] 2rem [m1-end];
 
             @for $i from 1 through 8 {
                 .m1n#{$i} {
@@ -19,7 +19,7 @@
 
         .measure2 {
             display: grid;
-            grid-template-columns: [m2-gutter-start] 1.5rem [m2-gutter-end m2n1-start] 3rem [m2n1-end m2n2-start] 3rem [m2n2-end m2n3-start] 3rem [m2n3-end m2n4-start] 3.3rem [m2n4-end m2n5-start] 3rem [m2n5-end m2n6-start] 3rem [m2n6-end m2n7-start] 2.5rem [m2n7-end m2n8-start] 3rem [m2-end];
+            grid-template-columns: [m2-gutter-start] .1rem [m2-gutter-end m2n1-start] 2rem [m2n1-end m2n2-start] 2rem [m2n2-end m2n3-start] 2rem [m2n3-end m2n4-start] 2rem [m2n4-end m2n5-start] 2rem [m2n5-end m2n6-start] 2rem [m2n6-end m2n7-start] 2rem [m2n7-end m2n8-start] 1rem [m2-end];
 
             @for $i from 1 through 8 {
                 .m2n#{$i} {
@@ -33,7 +33,7 @@
     &--sc-flams {
         .measure1 {
             display: grid;
-            grid-template-columns: [ts-start]9.6rem[ts-end m1n1-start] 4.8rem [m1n1-end m1n2-start] 3.3rem [m1n2-end m1n3-start] 6rem [m1n3-end m1n4-start] 4.8rem [m1n4-end m1n5-start] 3.3rem [m1n5-end m1n6-start] 3.25rem [m1n6-end m1-end];
+            grid-template-columns: [ts-start] 6rem [ts-end m1n1-start] 3rem [m1n1-end m1n2-start] 2.5rem [m1n2-end m1n3-start] 3.5rem [m1n3-end m1n4-start] 3rem [m1n4-end m1n5-start] 2rem [m1n5-end m1n6-start] 2rem [m1n6-end m1-end];
 
 
             @for $i from 1 through 6 {
@@ -47,7 +47,7 @@
 
         .measure2 {
             display: grid;
-            grid-template-columns: [m2-gutter-start] 4rem [m2-gutter-end m2n1-start] 4.5rem [m2n1-end m2n2-start] 3rem [m2n2-end m2n3-start] 5.8rem [m2n3-end m2n4-start] 4.4rem [m2n4-end m2n5-start] 3.1rem [m2n5-end m2n6-start] 3.25rem [m2-end];
+            grid-template-columns: [m2-gutter-start] 3rem [m2-gutter-end m2n1-start] 2.5rem [m2n1-end m2n2-start] 2rem [m2n2-end m2n3-start] 3.5rem [m2n3-end m2n4-start] 3rem [m2n4-end m2n5-start] 2rem [m2n5-end m2n6-start] 2rem [m2-end];
 
             @for $i from 1 through 6 {
                 .m2n#{$i} {
@@ -62,7 +62,7 @@
 
         .measure1 {
             display: grid;
-            grid-template-columns: [ts-start] 9.6rem [ts-end m1n1-start] 5rem [m1n1-end m1n2-start] 3.25rem [m1n2-end m1n3-start] 6rem [m1n3-end m1n4-start] 5rem [m1n4-end m1n5-start] 3.25rem [m1n5-end m1n6-start] 3.25rem [m1-end];
+            grid-template-columns: [ts-start] 6rem [ts-end m1n1-start] 3rem [m1n1-end m1n2-start] 2.5rem [m1n2-end m1n3-start] 3.5rem [m1n3-end m1n4-start] 3rem [m1n4-end m1n5-start] 2.25rem [m1n5-end m1n6-start] 2rem [m1-end];
 
             @for $i from 1 through 6 {
                 .m1n#{$i} {
@@ -73,7 +73,7 @@
 
         .measure2 {
             display: grid;
-            grid-template-columns: [m2-gutter-start]4rem[m2-gutter-end m2n1-start] 3.5rem [m2n1-end m2n2-start] 3.3rem[m2n2-end m2n3-start] 3.4rem [m2n3-end m2n4-start] 5.5rem [m2n4-end m2n5-start] 3.5rem [m2n5-end m2n6-start] 3.25rem [m2n6-end m2n7-start] 3.25rem [m2n7-end m2n8-start] 3.4rem [m2-end];
+            grid-template-columns: [m2-gutter-start] 2.5rem [m2-gutter-end m2n1-start] 2rem [m2n1-end m2n2-start] 2rem [m2n2-end m2n3-start] 2rem [m2n3-end m2n4-start] 4rem [m2n4-end m2n5-start] 2rem [m2n5-end m2n6-start] 2rem [m2n6-end m2n7-start] 2rem [m2n7-end m2n8-start] 2rem [m2-end];
 
             @for $i from 1 through 8 {
                 .m2n#{$i} {
@@ -87,7 +87,7 @@
 
         .measure1 {
             display: grid;
-            grid-template-columns: [ts-start] 9.6rem [ts-end m1n1-start] 5rem [m1n1-end m1n2-start] 3.25rem [m1n2-end m1n3-start] 6rem [m1n3-end m1n4-start] 5rem [m1n4-end m1n5-start] 3.25rem [m1n5-end m1n6-start] 3.25rem [m1-end];
+            grid-template-columns: [ts-start] 6rem [ts-end m1n1-start] 3rem [m1n1-end m1n2-start] 2.25rem [m1n2-end m1n3-start] 3.5rem [m1n3-end m1n4-start] 3rem [m1n4-end m1n5-start] 2.25rem [m1n5-end m1n6-start] 2rem [m1-end];
 
             @for $i from 1 through 6 {
                 .m1n#{$i} {
@@ -98,7 +98,7 @@
 
         .measure2 {
             display: grid;
-            grid-template-columns: [m2-gutter-start]3.5rem[m2-gutter-end m2n1-start] 3.5rem [m2n1-end m2n2-start] 6rem[m2n2-end m2n3-start] 3.5rem [m2n3-end m2n4-start] 6rem [m2n4-end m2n5-start] 3.5rem [m2n5-end m2n6-start] 5.75rem [m2n6-end m2n7-start] 3.5rem [m2n7-end m2n8-start] 3.4rem [m2-end];
+            grid-template-columns: [m2-gutter-start] 2.25rem [m2-gutter-end m2n1-start] 2.25rem [m2n1-end m2n2-start] 3.5rem [m2n2-end m2n3-start] 2.5rem [m2n3-end m2n4-start] 3.5rem [m2n4-end m2n5-start] 2.5rem [m2n5-end m2n6-start] 3.5rem [m2n6-end m2n7-start] 2.25rem [m2n7-end m2n8-start] 2rem [m2-end];
 
             @for $i from 1 through 8 {
                 .m2n#{$i} {
@@ -112,7 +112,7 @@
 
         .measure1 {
             display: grid;
-            grid-template-columns: [ts-start]9.6rem[ts-end m1n1-start] 4rem [m1n1-end m1n2-start] 3.3rem[m1n2-end m1n3-start] 3.4rem [m1n3-end m1n4-start] 6rem [m1n4-end m1n5-start] 3.5rem [m1n5-end m1n6-start] 3.5rem [m1n6-end m1n7-start] 3.5rem [m1n7-end m1n8-start] 3.4rem [m1-end];
+            grid-template-columns: [ts-start] 6rem [ts-end m1n1-start] 2.25rem [m1n1-end m1n2-start] 2.25rem [m1n2-end m1n3-start] 2.25rem [m1n3-end m1n4-start] 4rem [m1n4-end m1n5-start] 2.25rem [m1n5-end m1n6-start] 2.25rem [m1n6-end m1n7-start] 2.25rem [m1n7-end m1n8-start] 2rem [m1-end];
 
             @for $i from 1 through 8 {
                 .m1n#{$i} {
@@ -123,7 +123,7 @@
 
         .measure2 {
             display: grid;
-            grid-template-columns: [m2-gutter-start]4.5rem[m2-gutter-end m2n1-start] 3.5rem [m2n1-end m2n2-start] 3.3rem[m2n2-end m2n3-start] 3.4rem [m2n3-end m2n4-start] 5.5rem [m2n4-end m2n5-start] 3.5rem [m2n5-end m2n6-start] 3.25rem [m2n6-end m2n7-start] 3.25rem [m2n7-end m2n8-start] 3.4rem [m2-end];
+            grid-template-columns: [m2-gutter-start] 2.5rem [m2-gutter-end m2n1-start] 2.25rem [m2n1-end m2n2-start] 2rem [m2n2-end m2n3-start] 2rem [m2n3-end m2n4-start] 3.5rem [m2n4-end m2n5-start] 2.25rem [m2n5-end m2n6-start] 2rem [m2n6-end m2n7-start] 2.25rem [m2n7-end m2n8-start] 2rem [m2-end];
 
             @for $i from 1 through 8 {
                 .m2n#{$i} {
@@ -137,7 +137,7 @@
 
         .measure1 {
             display: grid;
-            grid-template-columns: [ts-start]9.6rem[ts-end m1n1-start] 3.5rem [m1n1-end m1n2-start] 6.5rem[m1n2-end m1n3-start] 3.5rem [m1n3-end m1n4-start] 6.25rem [m1n4-end m1n5-start] 3.5rem [m1n5-end m1n6-start] 6.5rem [m1n6-end m1n7-start] 3.5rem [m1n7-end m1n8-start] 3.4rem [m1-end];
+            grid-template-columns: [ts-start] 6rem [ts-end m1n1-start] 2rem [m1n1-end m1n2-start] 2rem [m1n2-end m1n3-start] 2rem [m1n3-end m1n4-start] 3.5rem [m1n4-end m1n5-start] 2.25rem [m1n5-end m1n6-start] 2rem [m1n6-end m1n7-start] 2rem [m1n7-end m1n8-start] 2rem [m1-end];
 
             @for $i from 1 through 8 {
                 .m1n#{$i} {
@@ -149,7 +149,7 @@
 
         .measure2 {
             display: grid;
-            grid-template-columns: [m2-gutter-start]4.5rem[m2-gutter-end m2n1-start] 3.5rem [m2n1-end m2n2-start] 6rem[m2n2-end m2n3-start] 3.5rem [m2n3-end m2n4-start] 6rem [m2n4-end m2n5-start] 3.5rem [m2n5-end m2n6-start] 5.75rem [m2n6-end m2n7-start] 3.5rem [m2n7-end m2n8-start] 3.4rem [m2-end];
+            grid-template-columns: [m2-gutter-start] 2.5rem [m2-gutter-end m2n1-start] 2rem [m2n1-end m2n2-start] 3.25rem [m2n2-end m2n3-start] 2.25rem [m2n3-end m2n4-start] 3.5rem [m2n4-end m2n5-start] 2.5rem [m2n5-end m2n6-start] 3rem [m2n6-end m2n7-start] 2rem [m2n7-end m2n8-start] 2rem [m2-end];
 
             @for $i from 1 through 8 {
                 .m2n#{$i} {
@@ -162,7 +162,7 @@
     &--sc-flams-taps-16s-flams-16s {
         .measure1 {
             display: grid;
-            grid-template-columns: [ts-start]9.6rem[ts-end m1n1-start] 3.5rem [m1n1-end m1n2-start] 6.5rem[m1n2-end m1n3-start] 3.75rem [m1n3-end m1n4-start] 6.25rem [m1n4-end m1n5-start] 3.5rem [m1n5-end m1n6-start] 6.5rem [m1n6-end m1n7-start] 3.5rem [m1n7-end m1n8-start] 3.4rem [m1-end];
+            grid-template-columns: [ts-start] 6rem [ts-end m1n1-start] 2.5rem [m1n1-end m1n2-start] 3.5rem [m1n2-end m1n3-start] 2.5rem [m1n3-end m1n4-start] 4rem [m1n4-end m1n5-start] 2.25rem [m1n5-end m1n6-start] 4rem [m1n6-end m1n7-start] 2.25rem [m1n7-end m1n8-start] 2rem [m1-end];
 
             @for $i from 1 through 8 {
                 .m1n#{$i} {
@@ -173,7 +173,7 @@
 
         .measure2 {
             display: grid;
-            grid-template-columns: [m2-gutter-start]4.5rem[m2-gutter-end m2n1-start] 3.5rem [m2n1-end m2n2-start] 3.25rem[m2n2-end m2n3-start] 3.25rem [m2n3-end m2n4-start] 6rem [m2n4-end m2n5-start] 3.5rem [m2n5-end m2n6-start] 3.25rem [m2n6-end m2n7-start] 3.25rem [m2n7-end m2n8-start] 3.4rem [m2-end];
+            grid-template-columns: [m2-gutter-start] 3rem [m2-gutter-end m2n1-start] 2rem [m2n1-end m2n2-start] 2.25rem [m2n2-end m2n3-start] 2rem [m2n3-end m2n4-start] 3.5rem [m2n4-end m2n5-start] 2rem [m2n5-end m2n6-start] 2.25rem [m2n6-end m2n7-start] 2rem [m2n7-end m2n8-start] 2rem [m2-end];
 
             @for $i from 1 through 8 {
                 .m2n#{$i} {
@@ -419,9 +419,9 @@
 }
 
 .left-flam {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
 
     margin-left: -.5em;
-    margin-bottom: -1.35em;
+    margin-bottom: -1.25em;
 }
