@@ -132,6 +132,12 @@ const Controls = () => {
   const exerciseInvertHandler = () => {
     const currentExercise = { ...exercise };
     currentExercise.sticking = invertSticking(currentExercise.sticking);
+    currentExercise.measure1.sticking = invertSticking(
+      currentExercise.measure1.sticking
+    );
+    currentExercise.measure2.sticking = invertSticking(
+      currentExercise.measure2.sticking
+    );
     currentExercise.inverted = !currentExercise.inverted;
     dispatch(setCurrentStickControlExercise(currentExercise));
   };
