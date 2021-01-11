@@ -66,7 +66,7 @@ import { ReactComponent as MixFlamsTaps16sFlamsTaps16sFlamsTaps16s24 } from "../
 
 const Notation = ({ rhythm }) => {
   return (
-    <>
+    <div className="notation-container">
       {(() => {
         switch (rhythm) {
           // Base Exercises
@@ -284,7 +284,7 @@ const Notation = ({ rhythm }) => {
             return null;
         }
       })()}
-    </>
+    </div>
   );
 };
 

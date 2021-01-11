@@ -4,8 +4,8 @@ import { ReactComponent as LeftFlam } from "../../SVGs/stick-control/left-flam.s
 
 const Sticking = ({ exercise }) => {
   return (
-    <div className={`sticking sticking--${exercise.class}`}>
-      <>
+    <div className="sticking-container">
+      <div className={`sticking sticking--${exercise.class}`}>
         <div className={`measure1 sticking--${exercise.class}`}>
           {exercise.measure1.sticking.split("").map((letter, i) => (
             <div key={i} className={`letter m1n${i + 1}`}>
@@ -20,7 +20,7 @@ const Sticking = ({ exercise }) => {
             </div>
           ))}
         </div>
-      </>
+      </div>
     </div>
   );
 };
