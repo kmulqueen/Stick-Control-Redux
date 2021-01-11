@@ -32,22 +32,76 @@
     }
 
     // Flams 16s - Fe+aFe+a|Fe+aFe+a
-    &-flams-16s {}
+    &-flams-16s {
+        @include respond(tab-port) {
+            width: 600px;
+            height: 100px;
+        }
+        @include respond(phone) {
+            width: 300px;
+            height: 50px;
+        }
+    }
 
     // Flams 16s + Flam Taps 16s - Fe+aFe+a|FeFaFeFa
-    &-flams-16s-flams-taps-16s {}
+    &-flams-16s-flams-taps-16s {
+        @include respond(tab-port) {
+            width: 600px;
+            height: 100px;
+        }
+        @include respond(phone) {
+            width: 300px;
+            height: 50px;
+        }
+    }
 
     // Flam Taps 16s + Flams 16s - FeFaFeFa|Fe+aFe+a
-    &-flams-taps-16s-flams-16s {}
+    &-flams-taps-16s-flams-16s {
+        @include respond(tab-port) {
+            width: 600px;
+            height: 100px;
+        }
+        @include respond(phone) {
+            width: 300px;
+            height: 50px;
+        }
+    }
 
     // Flam Taps 16s - FeFaFeFa|FeFaFeFa
-    &-flams-taps-16s {}
+    &-flams-taps-16s {
+        @include respond(tab-port) {
+            width: 600px;
+            height: 100px;
+        }
+        @include respond(phone) {
+            width: 300px;
+            height: 50px;
+        }
+    }
 
     // Flams + Flams 16s - F+aF+a|Fe+aFe+a
-    &-flams-flams-16s {}
+    &-flams-flams-16s {
+        @include respond(tab-port) {
+            width: 600px;
+            height: 100px;
+        }
+        @include respond(phone) {
+            width: 300px;
+            height: 50px;
+        }
+    }
 
     // Flams + Flam Taps 16s - F+aF+a|FeFaFeFa
-    &-flams-flams-taps-16s {}
+    &-flams-flams-taps-16s {
+        @include respond(tab-port) {
+            width: 600px;
+            height: 100px;
+        }
+        @include respond(phone) {
+            width: 300px;
+            height: 50px;
+        }
+    }
 
     // ============================= MIXED EXERCISES =============================
     // *************** 2/4 ***************
