@@ -1,6 +1,5 @@
 import React from "react";
 import { ReactComponent as LeftFlam } from "../../SVGs/stick-control/left-flam.svg";
-// import "../../dist/css/main.min.css";
 
 const Sticking = ({ exercise }) => {
   return (
