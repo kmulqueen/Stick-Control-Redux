@@ -365,6 +365,10 @@
             @include respond(tab-port) {
                 grid-template-columns: [ts-start] 6rem [ts-end m1n1-start] 2.5rem [m1n1-end m1n2-start] 2rem [m1n2-end m1n3-start] 3rem [m1n3-end m1n4-start] 2.5rem [m1n4-end m1n5-start] 2rem [m1n5-end m1n6-start] 1.5rem [m1n6-end m1-end];
             }
+
+            @include respond(phone) {
+                grid-template-columns: [ts-start] 3rem [ts-end m1n1-start] 1.25rem [m1n1-end m1n2-start] 1rem [m1n2-end m1n3-start] 1.5rem [m1n3-end m1n4-start] 1.25rem [m1n4-end m1n5-start] 1rem [m1n5-end m1n6-start] .75rem [m1n6-end m1-end];
+            }
         }
 
         .measure2 {
@@ -379,6 +383,10 @@
 
             @include respond(tab-port) {
                 grid-template-columns: [ts-start] 2rem [ts-end m2n1-start] 1.75rem [m2n1-end m2n2-start] 1.75rem [m2n2-end m2n3-start] 1.75rem [m2n3-end m2n4-start] 2.25rem [m2n4-end m2n5-start] 1.75rem [m2n5-end m2n6-start] 1.75rem [m2n6-end m2n7-start] 1.75rem [m2n7-end m2n8-start] 2rem [m2n8-end];
+            }
+
+            @include respond(phone) {
+                grid-template-columns: [ts-start] .75rem [ts-end m2n1-start] 1rem [m2n1-end m2n2-start] 1rem [m2n2-end m2n3-start] 1rem [m2n3-end m2n4-start] 1rem [m2n4-end m2n5-start] 1rem [m2n5-end m2n6-start] 1rem [m2n6-end m2n7-start] 1rem [m2n7-end m2n8-start] .75rem [m2n8-end];
             }
         }
     }

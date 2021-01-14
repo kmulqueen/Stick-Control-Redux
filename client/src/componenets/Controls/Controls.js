@@ -149,7 +149,7 @@ const Controls = () => {
 
     // Create exercise1
     // If no exercise number was given choose random exercise
-    if (!mixMeasure1Number) {
+    if (!mixMeasure1Number || mixMeasure1Number === "") {
       switch (mixMeasure1Section) {
         case "Any":
           const randomIndexAnyExercise = Math.floor(
@@ -216,7 +216,7 @@ const Controls = () => {
 
     // Create exercise2
     // If no exercise number was given choose random exercise
-    if (!mixMeasure2Number) {
+    if (!mixMeasure2Number || mixMeasure2Number === "") {
       switch (mixMeasure2Section) {
         case "Any":
           const randomIndexAnyExercise = Math.floor(
