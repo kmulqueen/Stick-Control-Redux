@@ -14,42 +14,49 @@
 
    ; // Flams - F+aF+a|F+aF+a
     &-flams {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
 
     // Flams 16s - Fe+aFe+a|Fe+aFe+a
     &-flams-16s {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
 
     // Flams 16s + Flam Taps 16s - Fe+aFe+a|FeFaFeFa
     &-flams-16s-flams-taps-16s {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
 
     // Flam Taps 16s + Flams 16s - FeFaFeFa|Fe+aFe+a
     &-flams-taps-16s-flams-16s {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
 
     // Flam Taps 16s - FeFaFeFa|FeFaFeFa
     &-flams-taps-16s {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
 
     // Flams + Flams 16s - F+aF+a|Fe+aFe+a
     &-flams-flams-16s {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
 
     // Flams + Flam Taps 16s - F+aF+a|FeFaFeFa
     &-flams-flams-taps-16s {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
@@ -58,12 +65,14 @@
     // *************** 2/4 ***************
     // Flams 16s + Flams - Fe+aFe+a|F+aF+a
     &-mixed-flams-16s-flams {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
 
     // Flam Taps 16s + Flams - FeFaFeFa|F+aF+a
     &-mixed-flams-taps-16s-flams {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
@@ -71,18 +80,21 @@
     // *************** 2/4 + 4/4 (1 Flam Measure + 1 SBC) ***************
     // Flams + SBC - F+aF+a|1+2+3+4+
     &-mixed-flams-sbc-2-4 {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
 
     // Flams 16s + SBC - Fe+aFe+a|1+2+3+4+
     &-mixed-flams-16s-sbc-2-4 {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
 
     // Flam Taps 16s + SBC - FeFaFeFa|1+2+3+4+
     &-mixed-flams-taps-16s-sbc-2-4 {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
@@ -91,18 +103,21 @@
     // *************** 4/4 + 2/4 (1 SBC + 1 Flam Measure) ***************
     // SBC + Flams - 1+2+3+4+|F+aF+a
     &-mixed-sbc-flams-4-2 {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
 
     // SBC + Flams 16s - 1+2+3+4+|Fe+aFe+a
     &-mixed-sbc-flams-16s-4-2 {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }
     
     // SBC + Flam Taps 16s - 1+2+3+4+|FeFaFeFa
     &-mixed-sbc-flams-taps-16s-4-2 {
+        @include notationRespond(tab-land);
         @include notationRespond(tab-port);
         @include notationRespond(phone);
     }

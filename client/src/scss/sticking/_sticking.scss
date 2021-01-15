@@ -48,6 +48,13 @@
     }
 
     &--sc-flams {
+        @include respond(tab-land) {
+            margin-left: -3rem;
+        }
+        @include respond(tab-port) {
+            margin-left: 0;
+        }
+        
         .measure1 {
             display: grid;
             grid-template-columns: [ts-start] 6rem [ts-end m1n1-start] 3rem [m1n1-end m1n2-start] 2rem [m1n2-end m1n3-start] 3.5rem [m1n3-end m1n4-start] 3.5rem [m1n4-end m1n5-start] 2rem [m1n5-end m1n6-start] 2rem [m1n6-end m1-end];
@@ -58,6 +65,10 @@
                     grid-column: #{$i+1} / #{$i+2};
                 }
 
+            }
+
+            @include respond(tab-land) {
+                grid-template-columns: [ts-start] 13.5rem [ts-end m1n1-start] 4rem [m1n1-end m1n2-start] 3rem [m1n2-end m1n3-start] 4.5rem [m1n3-end m1n4-start] 4rem [m1n4-end m1n5-start] 2.5rem [m1n5-end m1n6-start] 2rem [m1n6-end m1-end];
             }
 
             @include respond(tab-port) {
@@ -79,6 +90,10 @@
                     grid-column: #{$i+1} / #{$i+2};
                 }
 
+            }
+
+            @include respond(tab-land) {
+                grid-template-columns: [m2-gutter-start] 7rem [m2-gutter-end m2n1-start] 4rem [m2n1-end m2n2-start] 3rem [m2n2-end m2n3-start] 4rem [m2n3-end m2n4-start] 3rem [m2n4-end m2n5-start] 3rem [m2n5-end m2n6-start] 3rem [m2-end];
             }
 
             @include respond(tab-port) {
