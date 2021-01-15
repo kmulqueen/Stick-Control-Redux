@@ -30,3 +30,18 @@ ORDER: Base + typography > general layout + grid > page layout > components
         @media only screen and (min-width: 112.5em) { @content };    //1800
     }
 }
+
+@mixin notationRespond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { //600px
+            width: 300px;
+            height: 50px; 
+        };    
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { //900px
+            width: 600px;
+            height: 100px; 
+        };     
+    }
+}
