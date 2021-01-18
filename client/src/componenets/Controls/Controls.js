@@ -142,6 +142,23 @@ const Controls = () => {
     dispatch(setCurrentStickControlExercise(currentExercise));
   };
 
+  const measure1InvertHandler = () => {
+    const currentExercise = { ...exercise };
+    currentExercise.measure1.sticking = invertSticking(
+      currentExercise.measure1.sticking
+    );
+    currentExercise.measure1.inverted = !currentExercise.measure1.inverted;
+    dispatch(setCurrentStickControlExercise(currentExercise));
+  };
+  const measure2InvertHandler = () => {
+    const currentExercise = { ...exercise };
+    currentExercise.measure2.sticking = invertSticking(
+      currentExercise.measure2.sticking
+    );
+    currentExercise.measure2.inverted = !currentExercise.measure2.inverted;
+    dispatch(setCurrentStickControlExercise(currentExercise));
+  };
+
   const mixExercisesHandler = (e) => {
     e.preventDefault();
     // Initialize exercise variables
@@ -502,6 +519,8 @@ const Controls = () => {
       </form>
       <h3>Invert</h3>
       <button onClick={exerciseInvertHandler}>Invert Exercise</button>
+      <button onClick={measure1InvertHandler}>Invert Measure 1</button>
+      <button onClick={measure2InvertHandler}>Invert Measure 2</button>
       <h3>Mix Exercises</h3>
       <p>*Remove number from 'Exercise' field(s) to pick a random exercise</p>
       <form onSubmit={mixExercisesHandler}>

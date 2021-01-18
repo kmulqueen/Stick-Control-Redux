@@ -18,13 +18,45 @@ const Exercise = () => {
         <>
           {exercise.section !== "Mix Exercise" ? (
             <h3>
-              {exercise.section} - No. {exercise.exercise}{" "}
-              {exercise.inverted ? "- Inverted" : null}
+              {exercise.section} - No. {exercise.exercise}
+              {exercise.inverted &&
+              exercise.measure1.inverted &&
+              exercise.measure2.inverted
+                ? " - Inverted & Measure 1 Inverted & Measure 2 Inverted"
+                : exercise.inverted && exercise.measure1.inverted
+                ? " - Inverted & Measure 1 Inverted"
+                : exercise.inverted && exercise.measure2.inverted
+                ? " - Inverted & Measure 2 Inverted"
+                : exercise.measure1.inverted && exercise.measure2.inverted
+                ? " - Measure 1 Inverted & Measure 2 Inverted"
+                : exercise.inverted
+                ? " - Inverted"
+                : exercise.measure1.inverted
+                ? " - Measure 1 Inverted"
+                : exercise.measure2.inverted
+                ? " - Measure 2 Inverted"
+                : null}
             </h3>
           ) : (
             <h3>
-              {exercise.section} - {exercise.exercise}{" "}
-              {exercise.inverted ? "- Inverted" : null}
+              {exercise.section} - {exercise.exercise}
+              {exercise.inverted &&
+              exercise.measure1.inverted &&
+              exercise.measure2.inverted
+                ? " - Inverted & Measure 1 Inverted & Measure 2 Inverted"
+                : exercise.inverted && exercise.measure1.inverted
+                ? " - Inverted & Measure 1 Inverted"
+                : exercise.inverted && exercise.measure2.inverted
+                ? " - Inverted & Measure 2 Inverted"
+                : exercise.measure1.inverted && exercise.measure2.inverted
+                ? " - Measure 1 Inverted & Measure 2 Inverted"
+                : exercise.inverted
+                ? " - Inverted"
+                : exercise.measure1.inverted
+                ? " - Measure 1 Inverted"
+                : exercise.measure2.inverted
+                ? " - Measure 2 Inverted"
+                : null}
             </h3>
           )}
 
