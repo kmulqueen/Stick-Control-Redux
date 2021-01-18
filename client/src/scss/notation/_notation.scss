@@ -4,6 +4,7 @@
 }
 
 .notation {
+    @include notationRespond(desktop);
     @include notationRespond(tab-land);
     @include notationRespond(tab-port);
     @include notationRespond(phone);
