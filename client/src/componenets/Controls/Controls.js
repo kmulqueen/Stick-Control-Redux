@@ -130,7 +130,7 @@ const Controls = () => {
   };
 
   const exerciseInvertHandler = () => {
-    const currentExercise = { ...exercise };
+    const currentExercise = JSON.parse(JSON.stringify(exercise));
     currentExercise.sticking = invertSticking(currentExercise.sticking);
     currentExercise.measure1.sticking = invertSticking(
       currentExercise.measure1.sticking
@@ -143,7 +143,7 @@ const Controls = () => {
   };
 
   const measure1InvertHandler = () => {
-    const currentExercise = { ...exercise };
+    const currentExercise = JSON.parse(JSON.stringify(exercise));
     currentExercise.measure1.sticking = invertSticking(
       currentExercise.measure1.sticking
     );
@@ -151,7 +151,7 @@ const Controls = () => {
     dispatch(setCurrentStickControlExercise(currentExercise));
   };
   const measure2InvertHandler = () => {
-    const currentExercise = { ...exercise };
+    const currentExercise = JSON.parse(JSON.stringify(exercise));
     currentExercise.measure2.sticking = invertSticking(
       currentExercise.measure2.sticking
     );
